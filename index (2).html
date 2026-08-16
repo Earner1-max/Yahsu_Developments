@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yashu Developments - Full Stack Developer | Web Solutions & AI Integration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-glass fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo-3d">
+                <h1 class="text-3xl font-bold">
+                    <span class="gold-text">Yashu</span> Developments
+                </h1>
+            </div>
+            <div class="nav-menu hidden md:flex gap-8">
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#portfolio" class="nav-link">Portfolio</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#booking" class="nav-link">Book Now</a>
+                <button class="nav-link" onclick="toggleChat()">AI Assistant</button>
+            </div>
+            <button class="mobile-menu-btn md:hidden" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu hidden">
+        <a href="#services" class="block px-6 py-3 text-gold">Services</a>
+        <a href="#portfolio" class="block px-6 py-3 text-gold">Portfolio</a>
+        <a href="#skills" class="block px-6 py-3 text-gold">Skills</a>
+        <a href="#booking" class="block px-6 py-3 text-gold">Book Now</a>
+        <button class="block px-6 py-3 text-gold" onclick="toggleChat()">AI Assistant</button>
+    </div>
+
+    <!-- Hero Section with 3D Animation -->
+    <section class="hero-section min-h-screen flex items-center justify-center relative overflow-hidden pt-20">
+        <div class="hero-glow"></div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text-wrapper">
+                    <h1 class="hero-title">
+                        <span class="title-word" style="--word-index: 0">Full Stack</span>
+                        <span class="title-word" style="--word-index: 1">Web</span>
+                        <span class="title-word" style="--word-index: 2">Solutions</span>
+                    </h1>
+                    <p class="hero-subtitle">Premium Web Development • AI Integration • Cloud Solutions</p>
+                    <p class="hero-description">
+                        Transforming ideas into reality with 179+ completed projects. Specialized in Python, Node.js, 
+                        React, and cutting-edge AI technologies. Trusted by clients worldwide.
+                    </p>
+                    <div class="hero-stats">
+                        <div class="stat-box">
+                            <span class="stat-number">179+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">50+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary" onclick="scrollTo('#booking')">Book Consultation</button>
+                        <button class="btn btn-secondary" onclick="toggleChat()">Chat with AI</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="floating-cube"></div>
+                <div class="floating-sphere"></div>
+                <div class="floating-pyramid"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title text-center mb-16">
+                <span class="gold-text">Services</span> We Provide
+            </h2>
+            <div class="services-grid">
+                <div class="service-card premium-card">
+                    <div class="service-icon">
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 100 100" class="icon-svg">
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M35 50 Q50 35 65 50" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M35 50 Q50 65 65 50" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Responsive, fast, and scalable web applications using React, Vue, and modern frameworks</p>
+                </div>
+
+                <div class="service-card premium-card">
+                    <div class="service-icon">
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 100 100" class="icon-svg">
+                                <rect x="20" y="20" width="60" height="60" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="50" y1="20" x2="50" y2="80" stroke="currentColor" stroke-width="2"/>
+                                <line x1="20" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Backend Solutions</h3>
+                    <p>Robust APIs with Node.js, Express, Python, and database optimization. Cloud deployment ready.</p>
+                </div>
+
+                <div class="service-card premium-card">
+                    <div class="service-icon">
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 100 100" class="icon-svg">
+                                <circle cx="30" cy="30" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="70" cy="30" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="50" cy="70" r="15" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="40" y1="38" x2="60" y2="38" stroke="currentColor" stroke-width="2"/>
+                                <line x1="35" y1="60" x2="65" y2="60" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>AI Integration</h3>
+                    <p>NVIDIA API, OpenAI, and custom ML models for intelligent applications and chatbots</p>
+                </div>
+
+                <div class="service-card premium-card">
+                    <div class="service-icon">
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 100 100" class="icon-svg">
+                                <path d="M30 70 L50 30 L70 70 Z" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <line x1="35" y1="60" x2="65" y2="60" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Mobile Apps</h3>
+                    <p>Native and cross-platform apps for iOS and Android with seamless user experience</p>
+                </div>
+
+                <div class="service-card premium-card">
+                    <div class="service-icon">
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 100 100" class="icon-svg">
+                                <rect x="15" y="25" width="70" height="50" fill="none" stroke="currentColor" stroke-width="2" rx="5"/>
+                                <circle cx="50" cy="50" r="8" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M25 40 L35 50 L25 60" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M75 40 L65 50 L75 60" fill="none" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Telegram Mini Apps</h3>
+                    <p>Interactive mini apps for Telegram with full blockchain and gaming integration</p>
+                </div>
+
+                <div class="service-card premium-card">
+                    <div class="service-icon">
+                        <div class="icon-wrapper">
+                            <svg viewBox="0 0 100 100" class="icon-svg">
+                                <line x1="20" y1="50" x2="80" y2="50" stroke="currentColor" stroke-width="2"/>
+                                <path d="M60 30 L50 50 L60 70" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <path d="M40 30 L50 50 L40 70" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="50" cy="50" r="5" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>DevOps & Deployment</h3>
+                    <p>VPS management, Docker containerization, CI/CD pipelines, and server optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section py-20 px-6 bg-dark-gradient">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title text-center mb-16">
+                Featured <span class="gold-text">Projects</span>
+            </h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item premium-card">
+                    <div class="project-image">
+                        <div class="placeholder-3d">Flappy GTC</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Flappy GTC - Gaming Platform</h3>
+                        <p class="project-tech">HTML5 • JavaScript • Telegram Mini App</p>
+                        <p class="project-description">Interactive gaming mini app with GTC token integration and real-time multiplayer features</p>
+                        <div class="project-stats">
+                            <span>10k+ Users</span>
+                            <span>Real-time</span>
+                            <span>Web3</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item premium-card">
+                    <div class="project-image">
+                        <div class="placeholder-3d">GTC Bot</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>GTC Bot - Telegram Automation</h3>
+                        <p class="project-tech">Python • Telegram API • Cloudflare Workers</p>
+                        <p class="project-description">Intelligent bot system with admin panel, automated workflows, and database management</p>
+                        <div class="project-stats">
+                            <span>Python</span>
+                            <span>Cloud</span>
+                            <span>Automation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item premium-card">
+                    <div class="project-image">
+                        <div class="placeholder-3d">AI Chatbot</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>GTech AI Chatbot System</h3>
+                        <p class="project-tech">FastAPI • Ollama • NVIDIA API • React</p>
+                        <p class="project-description">Advanced AI chatbot with crypto-forex intelligence and VPS-based Ollama integration</p>
+                        <div class="project-stats">
+                            <span>AI/ML</span>
+                            <span>FastAPI</span>
+                            <span>VPS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item premium-card">
+                    <div class="project-image">
+                        <div class="placeholder-3d">Admin Panel</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>GTech Games Admin Dashboard</h3>
+                        <p class="project-tech">Express • Supabase • React • PostgreSQL</p>
+                        <p class="project-description">Comprehensive admin system for bot management, analytics, and real-time monitoring</p>
+                        <div class="project-stats">
+                            <span>Dashboard</span>
+                            <span>Supabase</span>
+                            <span>Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item premium-card">
+                    <div class="project-image">
+                        <div class="placeholder-3d">GrowX API</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>GrowX - Orders & Auth API</h3>
+                        <p class="project-tech">Node.js • Express • JWT • PostgreSQL</p>
+                        <p class="project-description">Scalable API with 12+ endpoints for authentication, orders, and tracking systems</p>
+                        <div class="project-stats">
+                            <span>12 Endpoints</span>
+                            <span>Secure</span>
+                            <span>Scalable</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item premium-card">
+                    <div class="project-image">
+                        <div class="placeholder-3d">E-Commerce</div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Full Stack E-Commerce Platform</h3>
+                        <p class="project-tech">React • Node.js • Stripe • PostgreSQL</p>
+                        <p class="project-description">Complete e-commerce solution with payment integration, inventory management, and analytics</p>
+                        <div class="project-stats">
+                            <span>Payment</span>
+                            <span>Inventory</span>
+                            <span>Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section py-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="section-title text-center mb-16">
+                <span class="gold-text">Technical</span> Skills
+            </h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Frontend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">HTML5</span>
+                        <span class="skill-tag">CSS3</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Vue.js</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">Tailwind CSS</span>
+                        <span class="skill-tag">WebGL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Backend</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">PHP</span>
+                        <span class="skill-tag">Django</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">GraphQL</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Databases & Cloud</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">Supabase</span>
+                        <span class="skill-tag">Firebase</span>
+                        <span class="skill-tag">MySQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Docker</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>AI & Specialized</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">NVIDIA API</span>
+                        <span class="skill-tag">OpenAI</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Telegram API</span>
+                        <span class="skill-tag">Web3</span>
+                        <span class="skill-tag">Blockchain</span>
+                        <span class="skill-tag">Mobile Apps</span>
+                        <span class="skill-tag">WebSocket</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>DevOps & Tools</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">VPS Management</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">Nginx</span>
+                        <span class="skill-tag">CI/CD</span>
+                        <span class="skill-tag">Webpack</span>
+                        <span class="skill-tag">NPM</span>
+                        <span class="skill-tag">Linux</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3>Project Types</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Websites</span>
+                        <span class="skill-tag">Web Apps</span>
+                        <span class="skill-tag">APIs</span>
+                        <span class="skill-tag">Chatbots</span>
+                        <span class="skill-tag">Mini Apps</span>
+                        <span class="skill-tag">Games</span>
+                        <span class="skill-tag">Mobile Apps</span>
+                        <span class="skill-tag">Admin Panels</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section py-20 px-6 bg-dark-gradient">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="section-title text-center mb-16">
+                Book a <span class="gold-text">Consultation</span>
+            </h2>
+            <div class="booking-container premium-card">
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="company">Company Name</label>
+                        <input type="text" id="company" name="company">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="service">Service Interested In</label>
+                        <select id="service" name="service" required>
+                            <option value="">Select a service</option>
+                            <option value="web-development">Web Development</option>
+                            <option value="backend">Backend Solutions</option>
+                            <option value="ai-integration">AI Integration</option>
+                            <option value="mobile-app">Mobile App</option>
+                            <option value="telegram-mini-app">Telegram Mini App</option>
+                            <option value="full-stack">Full Stack Project</option>
+                            <option value="consultation">General Consultation</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Preferred Date</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Preferred Time</label>
+                        <input type="time" id="time" name="time" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Project Details</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Describe your project..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-full">Schedule Consultation</button>
+                </form>
+                <div id="bookingStatus" class="booking-status hidden"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Chatbot -->
+    <div id="chatWidget" class="chat-widget">
+        <div class="chat-header">
+            <h3>AI Assistant</h3>
+            <button onclick="toggleChat()" class="close-btn">&times;</button>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <div class="chat-input-wrapper">
+            <input type="text" id="chatInput" placeholder="Ask about our services..." class="chat-input">
+            <button onclick="sendMessage()" class="chat-send">Send</button>
+        </div>
+        <div class="chat-info">Powered by NVIDIA AI</div>
+    </div>
+    <button class="chat-toggle" id="chatToggle" onclick="toggleChat()">
+        <div class="chat-toggle-inner"></div>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer py-12 px-6 bg-dark-gradient border-t border-gold-light">
+        <div class="max-w-7xl mx-auto">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3 class="gold-text mb-4">Yashu Developments</h3>
+                    <p class="text-gray-400">Building premium web solutions since 2009. 179+ projects delivered worldwide.</p>
+                </div>
+                <div class="footer-section">
+                    <h4 class="mb-4">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#booking">Book Now</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="mb-4">Contact</h4>
+                    <ul class="footer-links">
+                        <li><a href="mailto:dev@yashu.dev">dev@yashu.dev</a></li>
+                        <li><a href="tel:+91XXXXXXXXXX">+91 XXXXXXXXXX</a></li>
+                        <li>Hyderabad, India</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4 class="mb-4">Follow Us</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Twitter</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom text-center py-8 border-t border-gold-light">
+                <p class="text-gray-400">&copy; 2024 Yashu Developments. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
